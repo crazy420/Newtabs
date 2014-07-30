@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+manage|/home/manjush/Documents/LiClipse Workspace/tabs/src/manage.py
+tabs.__init__|/home/manjush/Documents/LiClipse Workspace/tabs/src/tabs/__init__.py
+tabs.settings|/home/manjush/Documents/LiClipse Workspace/tabs/src/tabs/settings.py
+tabs.urls|/home/manjush/Documents/LiClipse Workspace/tabs/src/tabs/urls.py
+tabs.wsgi|/home/manjush/Documents/LiClipse Workspace/tabs/src/tabs/wsgi.py

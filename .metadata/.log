@@ -1,0 +1,881 @@
+!SESSION 2014-07-28 21:43:39.630 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-07-28 21:44:05.582
+!MESSAGE Unable to create class 'org.eclipse.ui.internal.menus.CompatibilityWorkbenchWindowControlContribution' from bundle '208'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:271)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:186)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:50)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolControlContribution.createControl(ToolControlContribution.java:65)
+	at org.eclipse.jface.action.ControlContribution.fill(ControlContribution.java:101)
+	at org.eclipse.jface.action.ToolBarManager.update(ToolBarManager.java:365)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer$3.handleEvent(ToolBarManagerRenderer.java:205)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4622)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:345)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarContributionRecord.updateVisibility(ToolBarContributionRecord.java:73)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer$10.changed(ToolBarManagerRenderer.java:510)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:110)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.runAndTrack(EclipseContext.java:319)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.processAddition(ToolBarManagerRenderer.java:502)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.generateContributions(ToolBarManagerRenderer.java:471)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.processContribution(ToolBarManagerRenderer.java:430)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.createWidget(ToolBarManagerRenderer.java:391)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.handleEvent(PartRenderingEngine.java:289)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4622)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:356)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:341)
+	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.processAddition(ContributionsAnalyzer.java:369)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.addTrimContributions(TrimBarRenderer.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:166)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$6.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:687)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1074)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.updateDisplay(MechanicStatusControlContribution.java:171)
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.createControl(MechanicStatusControlContribution.java:141)
+	at org.eclipse.ui.menus.WorkbenchWindowControlContribution.delegateCreateControl(WorkbenchWindowControlContribution.java:105)
+	at org.eclipse.ui.internal.menus.CompatibilityWorkbenchWindowControlContribution.construct(CompatibilityWorkbenchWindowControlContribution.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 102 more
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-28 21:44:05.694
+!MESSAGE Directory '/home/manjush/.eclipse/mechanic' does not exist.
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-28 21:44:05.700
+!MESSAGE Directory '/home/manjush/liclipse/configuration/com.google.eclipse.mechanic/mechanic' does not exist.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-28 21:44:07.425
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:371)
+	at org.eclipse.jface.dialogs.MessageDialog.openQuestion(MessageDialog.java:466)
+	at com.brainwy.liclipse.theme.e4.ProcessThemeActivationOnStartup$5.run(ProcessThemeActivationOnStartup.java:173)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.updateDisplay(MechanicStatusControlContribution.java:171)
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.access$4(MechanicStatusControlContribution.java:166)
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution$1.statusChanged(MechanicStatusControlContribution.java:100)
+	at com.google.eclipse.mechanic.MechanicService$NotificationDispatcher.run(MechanicService.java:393)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 34 more
+
+!ENTRY org.eclipse.ui 4 0 2014-07-28 21:44:07.433
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:371)
+	at org.eclipse.jface.dialogs.MessageDialog.openQuestion(MessageDialog.java:466)
+	at com.brainwy.liclipse.theme.e4.ProcessThemeActivationOnStartup$5.run(ProcessThemeActivationOnStartup.java:173)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.updateDisplay(MechanicStatusControlContribution.java:171)
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution.access$4(MechanicStatusControlContribution.java:166)
+	at com.google.eclipse.mechanic.plugin.ui.MechanicStatusControlContribution$1.statusChanged(MechanicStatusControlContribution.java:100)
+	at com.google.eclipse.mechanic.MechanicService$NotificationDispatcher.run(MechanicService.java:393)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 34 more
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2014-07-28 21:44:12.472
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1924)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1547)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1514)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1579)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1576)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.restart(Workbench.java:2677)
+	at com.brainwy.liclipse.theme.e4.ProcessThemeActivationOnStartup$5.run(ProcessThemeActivationOnStartup.java:179)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:413)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1109)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 54 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-07-28 21:44:12.473
+!MESSAGE Exception occurred while unrendering: org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@10bb3372 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: %trimmedwindow.label.eclipseSDK, iconURI: null, tooltip: null, context: null, variables: [], x: 0, y: 0, width: 1024, height: 724)
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1924)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1547)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1514)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1579)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1576)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.restart(Workbench.java:2677)
+	at com.brainwy.liclipse.theme.e4.ProcessThemeActivationOnStartup$5.run(ProcessThemeActivationOnStartup.java:179)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3806)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3444)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:413)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1109)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 54 more
+!SESSION 2014-07-28 21:44:13.863 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-28 21:44:21.531
+!MESSAGE Directory '/home/manjush/.eclipse/mechanic' does not exist.
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-28 21:44:21.536
+!MESSAGE Directory '/home/manjush/liclipse/configuration/com.google.eclipse.mechanic/mechanic' does not exist.
+!SESSION 2014-07-30 21:41:01.525 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 21:41:26.654
+!MESSAGE Directory '/home/manjush/.eclipse/mechanic' does not exist.
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 21:41:26.680
+!MESSAGE Directory '/home/manjush/liclipse/configuration/com.google.eclipse.mechanic/mechanic' does not exist.
+
+!ENTRY de.loskutov.anyedit.AnyEditTools 1 0 2014-07-30 21:43:50.396
+!MESSAGE Workspace contains 1 resources:
+0 files in 0 folders and 1 projects.
+
+In average each folder contains 0 files, and each project 0 resources.
+
+
+!ENTRY org.python.pydev.shared_core 1 1 2014-07-30 21:46:56.343
+!MESSAGE - Ok, file is non-null. Getting info on:/usr/bin/python
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python</name>
+<version>2.7</version>
+<executable>/usr/bin/python</executable>
+<lib>/usr/lib/python2.7</lib>
+<lib>/usr/lib/python2.7/plat-linux2</lib>
+<lib>/usr/lib/python2.7/lib-tk</lib>
+<lib>/usr/lib/python2.7/lib-dynload</lib>
+<lib>/usr/local/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages/PIL</lib>
+<lib>/usr/lib/python2.7/dist-packages/gst-0.10</lib>
+<lib>/usr/lib/python2.7/dist-packages/gtk-2.0</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_hashlib</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_ssl</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>nose</forced_lib>
+<forced_lib>nose.tools</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+!STACK 0
+java.lang.RuntimeException: - Ok, file is non-null. Getting info on:/usr/bin/python
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python</name>
+<version>2.7</version>
+<executable>/usr/bin/python</executable>
+<lib>/usr/lib/python2.7</lib>
+<lib>/usr/lib/python2.7/plat-linux2</lib>
+<lib>/usr/lib/python2.7/lib-tk</lib>
+<lib>/usr/lib/python2.7/lib-dynload</lib>
+<lib>/usr/local/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages/PIL</lib>
+<lib>/usr/lib/python2.7/dist-packages/gst-0.10</lib>
+<lib>/usr/lib/python2.7/dist-packages/gtk-2.0</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_hashlib</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_ssl</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>nose</forced_lib>
+<forced_lib>nose.tools</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterEditor.getNewInputObject(AbstractInterpreterEditor.java:977)
+	at org.python.copiedfromeclipsesrc.PythonListEditor.addPressed(PythonListEditor.java:132)
+	at org.python.copiedfromeclipsesrc.PythonListEditor$1.widgetSelected(PythonListEditor.java:225)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4486)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3831)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3441)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceDialog.open(WorkbenchPreferenceDialog.java:221)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4486)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3831)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3441)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.brainwy.liclipse.rcp.IDEApplication.start(IDEApplication.java:195)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.python.pydev.shared_core 1 1 2014-07-30 21:47:05.211
+!MESSAGE Restoring info for: /usr/bin/python
+!STACK 0
+java.lang.RuntimeException: Restoring info for: /usr/bin/python
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:517)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:337)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:641)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$3.run(AbstractInterpreterPreferencesPage.java:262)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.IOException: Expecting: /home/manjush/Documents/LiClipse Workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p/modulesKeys to exist (and be a file).
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:288)
+	at org.python.pydev.editor.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:371)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:515)
+	... 4 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2014-07-30 21:47:06.962
+!MESSAGE Finished restoring information for: /usr/bin/python at: /home/manjush/Documents/LiClipse Workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: /usr/bin/python at: /home/manjush/Documents/LiClipse Workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:562)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:337)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:641)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$3.run(AbstractInterpreterPreferencesPage.java:262)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.python.pydev.shared_core 4 4 2014-07-30 21:47:07.251
+!MESSAGE Info: Rebuilding internal caches: /home/manjush/Documents/LiClipse Workspace/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/python.pydevsysteminfo (Expected error to be provided and got no error!)
+
+!ENTRY org.python.pydev.shared_core 4 4 2014-07-30 21:47:28.014
+!MESSAGE ERROR reading shell.
+ProcessInfo:
+
+ - Executed: /usr/bin/python -u /home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/pycompletionserver.py 51465
+
+ - Environment:
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-99hFGx5KfW,guid=116005dbadd244e59410f5d50000001d
+DEFAULTS_PATH=/usr/share/gconf/gnome-classic.default.path
+DESKTOP_SESSION=gnome-classic
+DISPLAY=:0.0
+GDMSESSION=gnome-classic
+GDM_LANG=en_US
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GNOME_KEYRING_CONTROL=/tmp/keyring-xWWB6K
+GNOME_KEYRING_PID=1541
+GPG_AGENT_INFO=/tmp/keyring-xWWB6K/gpg:0:1
+HOME=/home/manjush
+LANG=en_US.UTF-8
+LANGUAGE=en_US:en
+LIBOVERLAY_SCROLLBAR=0
+LOGNAME=manjush
+MANDATORY_PATH=/usr/share/gconf/gnome-classic.mandatory.path
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+PWD=/home/manjush
+PYTHONPATH=/home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc/pydev_sitecustomize:/usr/lib/python2.7:/usr/lib/python2.7/plat-linux2:/usr/lib/python2.7/lib-tk:/usr/lib/python2.7/lib-dynload:/usr/local/lib/python2.7/dist-packages:/usr/lib/python2.7/dist-packages:/usr/lib/python2.7/dist-packages/PIL:/usr/lib/python2.7/dist-packages/gst-0.10:/usr/lib/python2.7/dist-packages/gtk-2.0
+QT_ACCESSIBILITY=1
+SESSION_MANAGER=local/Avatar:@/tmp/.ICE-unix/1558,unix/Avatar:/tmp/.ICE-unix/1558
+SHELL=/bin/bash
+SSH_AGENT_PID=1597
+SSH_AUTH_SOCK=/tmp/keyring-xWWB6K/ssh
+USER=manjush
+USERNAME=manjush
+WINDOWPATH=7
+XAUTHORITY=/var/run/gdm/auth-for-manjush-mT4Hno/database
+XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome-classic:/etc/xdg
+XDG_CURRENT_DESKTOP=GNOME
+XDG_DATA_DIRS=/usr/share/gnome-classic:/usr/share/gnome:/usr/local/share/:/usr/share/
+XDG_SESSION_COOKIE=46724a09fa952d3cf63ab23901af0b12-1406733756.524495-1391400728
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+
+ - Working Dir:
+/home/manjush/liclipse/plugins/org.python.pydev_3.6.0.201406221719/pysrc
+
+ - OS:
+Linux
+
+ - Std output:
+
+
+ - Err output:
+/usr/lib/python2.7/dist-packages/Onboard/__init__.py:6: Warning: cannot register existing type `GdkDisplayManager'
+  from . import osk
+/usr/lib/python2.7/dist-packages/Onboard/__init__.py:6: Warning: g_once_init_leave: assertion `result != 0' failed
+  from . import osk
+/usr/lib/python2.7/dist-packages/Onboard/__init__.py:6: Warning: g_type_register_static: assertion `parent_type > 0' failed
+  from . import osk
+/usr/lib/python2.7/dist-packages/Onboard/__init__.py:6: Warning: g_object_new: assertion `G_TYPE_IS_OBJECT (object_type)' failed
+  from . import osk
+
+!STACK 0
+java.net.SocketTimeoutException
+	at sun.nio.ch.SocketAdaptor$SocketInputStream.read(Unknown Source)
+	at sun.nio.ch.ChannelInputStream.read(Unknown Source)
+	at java.io.InputStream.read(Unknown Source)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:454)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:506)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:692)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getImportCompletions(AbstractShell.java:756)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.createTokensFromServer(CompiledModule.java:362)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.<init>(CompiledModule.java:167)
+	at org.python.pydev.editor.codecompletion.revisited.modules.AbstractModule.createModule(AbstractModule.java:275)
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.getModule(ModulesManager.java:917)
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.getModule(ModulesManager.java:765)
+	at org.python.pydev.editor.codecompletion.revisited.SystemModulesManager.getModule(SystemModulesManager.java:353)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.updateKeysIfNeededAndSave(AbstractAdditionalDependencyInfo.java:236)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.synchInfoToPythonPath(InterpreterInfoBuilder.java:108)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.synchronizeManagerToNameToInfoPythonpath(SynchSystemModulesManager.java:391)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:260)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.python.pydev.shared_core 4 4 2014-07-30 21:50:07.038
+!MESSAGE Info: Rebuilding internal caches: /home/manjush/Documents/LiClipse Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/tabs/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+
+!ENTRY org.eclipse.jface 2 0 2014-07-30 21:51:27.409
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-07-30 21:51:27.409
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c71aedc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b8f0c84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/scope_definition.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/ctags.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/launch.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/indent.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/change_color_theme.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/templates.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/supported_languages.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2014-07-30 21:59:04.019
+!MESSAGE Help document /com.brainwy.liclipse.help/spell_checking.html cannot be opened.
+!SESSION 2014-07-30 22:03:06.195 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 22:03:19.684
+!MESSAGE Directory '/home/manjush/.eclipse/mechanic' does not exist.
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 22:03:19.687
+!MESSAGE Directory '/home/manjush/liclipse/configuration/com.google.eclipse.mechanic/mechanic' does not exist.
+!SESSION 2014-07-30 22:04:43.340 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 22:04:56.279
+!MESSAGE Directory '/home/manjush/.eclipse/mechanic' does not exist.
+
+!ENTRY com.google.eclipse.mechanic 2 0 2014-07-30 22:04:56.284
+!MESSAGE Directory '/home/manjush/liclipse/configuration/com.google.eclipse.mechanic/mechanic' does not exist.
+
+!ENTRY org.eclipse.jface 2 0 2014-07-30 22:05:49.529
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-07-30 22:05:49.529
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ca5cf2e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9c50487,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
